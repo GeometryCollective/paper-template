@@ -1,0 +1,98 @@
+\usepackage{amsmath,amssymb,amsthm}
+
+% Typography =========================================================================
+\usepackage[charter,cal=cmcal,sfscaled=true]{mathdesign} % use Charter, which offers uniformity between math + text fonts (and looks nice)
+\usepackage{microtype} % more sophisticated kerning, targeting uniform gray / straight margins
+\usepackage{ellipsis} % fix spacing around ...
+\usepackage{mathtools}
+\mathtoolsset{centercolon} % properly center :=
+
+% Abbreviations =========================================================================
+\newcommand{\Eg}{\emph{E.g.}}
+\newcommand{\eg}{\emph{e.g.}}
+\newcommand{\Ie}{\emph{I.e.}}
+\newcommand{\ie}{\emph{i.e.}}
+\newcommand{\Etc}{\emph{Etc.}}
+\newcommand{\etc}{\emph{etc.}}
+\newcommand{\etal}{\emph{et al.}}
+
+% Figures =========================================================================
+% Use this "figure location" command to describe placement of sub-figures in captions ("Left:", "Right:", etc.).
+% This way, all such labels have a consistent style (which can be later modified if need be).
+\newcommand{\figloc}[1]{\emph{#1}}
+
+% Math macros =====================================================================
+\def\NN{\mathbb{N}} % natural numbers
+\def\ZZ{\mathbb{Z}} % integers
+\def\RR{\mathbb{R}} % reals
+\def\CC{\mathbb{C}} % complex numbers
+\def\HH{\mathbb{H}} % quaternions
+
+\DeclareMathOperator{\re}{Re} % real part
+\DeclareMathOperator{\im}{Im} % imaginary part
+\DeclareMathOperator{\atan}{atan2} % two-argument arc tangent
+
+% macros for common indices, to adjust kerning (many just default kerning, but there in case it happens to get typed anyway...)
+\renewcommand{\ij}{i\!j}
+  \newcommand{\jk}{jk}
+  \newcommand{\ki}{ki}
+  \newcommand{\ji}{ji}
+  \newcommand{\kj}{kj}
+  \newcommand{\ik}{ik}
+  \newcommand{\ijk}{i\!jk}
+
+% sans-serif macros for matrices and vectors (to avoid conflicts with often heavily overloaded notation)
+\newcommand{\T}{\mathsf{T}} % transpose
+\newcommand{\Asf}{\mathsf{A}}
+\newcommand{\Bsf}{\mathsf{B}}
+\newcommand{\Csf}{\mathsf{C}}
+\newcommand{\Dsf}{\mathsf{D}}
+\newcommand{\Esf}{\mathsf{E}}
+\newcommand{\Fsf}{\mathsf{F}}
+\newcommand{\Gsf}{\mathsf{G}}
+\newcommand{\Hsf}{\mathsf{H}}
+\newcommand{\Isf}{\mathsf{I}}
+\newcommand{\Jsf}{\mathsf{J}}
+\newcommand{\Ksf}{\mathsf{K}}
+\newcommand{\Lsf}{\mathsf{L}}
+\newcommand{\Msf}{\mathsf{M}}
+\newcommand{\Nsf}{\mathsf{N}}
+\newcommand{\Osf}{\mathsf{O}}
+\newcommand{\Psf}{\mathsf{P}}
+\newcommand{\Qsf}{\mathsf{Q}}
+\newcommand{\Rsf}{\mathsf{R}}
+\newcommand{\Ssf}{\mathsf{S}}
+\newcommand{\Tsf}{\mathsf{T}}
+\newcommand{\Usf}{\mathsf{U}}
+\newcommand{\Vsf}{\mathsf{V}}
+\newcommand{\Wsf}{\mathsf{W}}
+\newcommand{\Xsf}{\mathsf{X}}
+\newcommand{\Ysf}{\mathsf{Y}}
+\newcommand{\Zsf}{\mathsf{Z}}
+\newcommand{\asf}{\mathsf{a}}
+\newcommand{\bsf}{\mathsf{b}}
+\newcommand{\csf}{\mathsf{c}}
+\newcommand{\dsf}{\mathsf{d}}
+\newcommand{\esf}{\mathsf{e}}
+\newcommand{\fsf}{\mathsf{f}}
+\newcommand{\gsf}{\mathsf{g}}
+\newcommand{\hsf}{\mathsf{h}}
+\newcommand{\isf}{\mathsf{i}}
+\newcommand{\jsf}{\mathsf{j}}
+\newcommand{\ksf}{\mathsf{k}}
+\newcommand{\lsf}{\mathsf{l}}
+\newcommand{\msf}{\mathsf{m}}
+\newcommand{\nsf}{\mathsf{n}}
+\newcommand{\osf}{\mathsf{o}}
+\newcommand{\psf}{\mathsf{p}}
+\newcommand{\qsf}{\mathsf{q}}
+\newcommand{\rsf}{\mathsf{r}}
+\newcommand{\ssf}{\mathsf{s}}
+\newcommand{\tsf}{\mathsf{t}}
+\newcommand{\usf}{\mathsf{u}}
+\newcommand{\vsf}{\mathsf{v}}
+\newcommand{\wsf}{\mathsf{w}}
+\newcommand{\xsf}{\mathsf{x}}
+\newcommand{\ysf}{\mathsf{y}}
+\newcommand{\zsf}{\mathsf{z}}
+

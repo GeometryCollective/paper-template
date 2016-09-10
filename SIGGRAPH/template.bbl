@@ -1,0 +1,86 @@
+\begin{thebibliography}{\protect\citename{Pellacini et~al\mbox{.} }2005}
+
+\bibitem[\protect\citename{Agarwal et~al\mbox{.} }]{ceres-solver}
+{\sc Agarwal, S., Mierle, K., and Others}.
+\newblock Ceres solver.
+\newblock \url{https://code.google.com/p/ceres-solver/}.
+
+\bibitem[\protect\citename{Anonymous }1976]{Anonymous:1976:POT}
+{\sc Anonymous}, 1976.
+\newblock Planes of the head.
+\newblock \url{http://www.planesofthehead.com/}.
+
+\bibitem[\protect\citename{Fedkiw et~al\mbox{.} }2001]{fedkiw:2001:VSO}
+{\sc Fedkiw, R., Stam, J., and Jensen, H.~W.}
+\newblock 2001.
+\newblock Visual simulation of smoke.
+\newblock In {\em Proceedings of SIGGRAPH 2001}, ACM Press / ACM SIGGRAPH,
+  E.~Fiume, Ed., Computer Graphics Proceedings, Annual Conference Series, ACM,
+  15--22.
+
+\bibitem[\protect\citename{Jobson et~al\mbox{.} }1995]{Jobs95}
+{\sc Jobson, D.~J., Rahman, Z., and Woodell, G.~A.}
+\newblock 1995.
+\newblock Retinex image processing: Improved fidelity to direct visual
+  observation.
+\newblock In {\em Proceedings of the IS\&T Fourth Color Imaging Conference:
+  Color Science, Systems, and Applications}, vol.~4, The Society for Imaging
+  Science and Technology, 124--125.
+
+\bibitem[\protect\citename{Kartch }2000]{kartch:2000:ERA}
+{\sc Kartch, D.}
+\newblock 2000.
+\newblock {\em Efficient Rendering and Compression for Full-Parallax
+  Computer-Generated Holographic Stereograms}.
+\newblock PhD thesis, Cornell University.
+
+\bibitem[\protect\citename{Landis }2002]{notes2002}
+{\sc Landis, H.}, 2002.
+\newblock Global illumination in production.
+\newblock ACM SIGGRAPH 2002 Course \#16 Notes, July.
+
+\bibitem[\protect\citename{Levoy et~al\mbox{.} }2000]{levoy:2000:TDM}
+{\sc Levoy, M., Pulli, K., Curless, B., Rusinkiewicz, S., Koller, D., Pereira,
+  L., Ginzton, M., Anderson, S., Davis, J., Ginsberg, J., Shade, J., and Fulk,
+  D.}
+\newblock 2000.
+\newblock The digital michelangelo project.
+\newblock In {\em Proceedings of SIGGRAPH 2000}, ACM Press / ACM SIGGRAPH, New
+  York, K.~Akeley, Ed., Computer Graphics Proceedings, Annual Conference
+  Series, ACM, 131--144.
+
+\bibitem[\protect\citename{Park et~al\mbox{.} }2006]{Park:2006:DSI}
+{\sc Park, S.~W., Linsen, L., Kreylos, O., Owens, J.~D., and Hamann, B.}
+\newblock 2006.
+\newblock Discrete sibson interpolation.
+\newblock {\em IEEE Transactions on Visualization and Computer Graphics 12}, 2
+  (Mar.\slash Apr.), 243--253.
+
+\bibitem[\protect\citename{Parke and Waters }1996]{parke:1996:CFA}
+{\sc Parke, F.~I., and Waters, K.}
+\newblock 1996.
+\newblock {\em Computer Facial Animation}.
+\newblock A. K. Peters.
+
+\bibitem[\protect\citename{Pellacini et~al\mbox{.} }2005]{Pellacini:2005:LAH}
+{\sc Pellacini, F., Vidim{\v{c}}e, K., Lefohn, A., Mohr, A., Leone, M., and
+  Warren, J.}
+\newblock 2005.
+\newblock Lpics: a hybrid hardware-accelerated relighting engine for computer
+  cinematography.
+\newblock {\em ACM Transactions on Graphics 24}, 3 (Aug.), 464--470.
+
+\bibitem[\protect\citename{Sako and Fujimura }2000]{sako:2001:SSB}
+{\sc Sako, Y., and Fujimura, K.}
+\newblock 2000.
+\newblock Shape similarity by homotropic deformation.
+\newblock {\em The Visual Computer 16}, 1, 47--61.
+
+\bibitem[\protect\citename{Yee }2000]{yee:2000:SSA}
+{\sc Yee, Y. L.~H.}
+\newblock 2000.
+\newblock {\em Spatiotemporal sensistivity and visual attention for efficient
+  rendering of dynamic environments}.
+\newblock Master's thesis, Cornell University.
+
+\end{thebibliography}
