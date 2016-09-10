@@ -7,6 +7,7 @@
 \usepackage{mathtools}
 \mathtoolsset{centercolon} % properly center :=
 
+
 % Abbreviations =========================================================================
 \newcommand{\Eg}{\emph{E.g.}}
 \newcommand{\eg}{\emph{e.g.}}
@@ -15,11 +16,26 @@
 \newcommand{\Etc}{\emph{Etc.}}
 \newcommand{\etc}{\emph{etc.}}
 \newcommand{\etal}{\emph{et al.}}
+\newcommand{\cf}{\emph{cf.}}
+\newcommand{\esp}{\emph{esp.}}
+\newcommand{\resp}{\emph{resp.}}
+
 
 % Figures =========================================================================
 % Use this "figure location" command to describe placement of sub-figures in captions ("Left:", "Right:", etc.).
 % This way, all such labels have a consistent style (which can be later modified if need be).
 \newcommand{\figloc}[1]{\emph{#1}}
+
+
+% References ======================================================================
+\renewcommand{\eqref}[1]{Eqn.~\ref{eq:#1}}
+\newcommand{\eqrefs}[2]{Eqn.~\ref{eq:#1} and \ref{eq:#2}}
+\newcommand{\secref}[1]{Sec.~\ref{sec:#1}}
+\newcommand{\secrefs}[2]{Sections~\ref{sec:#1} and \ref{sec:#2}}
+\newcommand{\appref}[1]{App.~\ref{app:#1}}
+\newcommand{\figref}[1]{Fig.~\ref{fig:#1}}
+\newcommand{\tabref}[1]{Table~\ref{tab:#1}}
+
 
 % Math macros =====================================================================
 \def\NN{\mathbb{N}} % natural numbers
@@ -31,6 +47,8 @@
 \DeclareMathOperator{\re}{Re} % real part
 \DeclareMathOperator{\im}{Im} % imaginary part
 \DeclareMathOperator{\atan}{atan2} % two-argument arc tangent
+
+\newcommand{\id}{\mathrm{id}} % identity operator
 
 % macros for common indices, to adjust kerning (many just default kerning, but there in case it happens to get typed anyway...)
 \renewcommand{\ij}{i\!j}
