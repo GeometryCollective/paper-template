@@ -1,12 +1,11 @@
-\usepackage{amsmath,amsthm}
-
-% Typography =========================================================================
-\usepackage[charter,cal=cmcal,sfscaled=true]{mathdesign} % use Charter, which offers uniformity between math + text fonts (and looks nice)
-\usepackage{microtype} % more sophisticated kerning, targeting uniform gray / straight margins
-\usepackage{ellipsis} % fix spacing around ...
+%%% OFF %%% \usepackage{amsmath,amssymb,amsthm}
+%%% OFF %%% 
+%%% OFF %%% % Typography =========================================================================
+%%% OFF %%% \usepackage[charter,cal=cmcal,sfscaled=true]{mathdesign} % use Charter, which offers uniformity between math + text fonts (and looks nice)
+%%% OFF %%% \usepackage{microtype} % more sophisticated kerning, targeting uniform gray / straight margins
+%%% OFF %%% \usepackage{ellipsis} % fix spacing around ...
 \usepackage{mathtools}
 \mathtoolsset{centercolon} % properly center :=
-
 
 % Abbreviations =========================================================================
 \newcommand{\Eg}{\emph{E.g.}}
@@ -16,16 +15,7 @@
 \newcommand{\Etc}{\emph{Etc.}}
 \newcommand{\etc}{\emph{etc.}}
 \newcommand{\etal}{\emph{et al.}}
-\newcommand{\cf}{\emph{cf.}}
-\newcommand{\esp}{\emph{esp.}}
 \newcommand{\resp}{\emph{resp.}}
-
-
-% Figures =========================================================================
-% Use this "figure location" command to describe placement of sub-figures in captions ("Left:", "Right:", etc.).
-% This way, all such labels have a consistent style (which can be later modified if need be).
-\newcommand{\figloc}[1]{\emph{#1}}
-
 
 % References ======================================================================
 \renewcommand{\eqref}[1]{Eqn.~\ref{eq:#1}}
@@ -35,7 +25,6 @@
 \newcommand{\appref}[1]{App.~\ref{app:#1}}
 \newcommand{\figref}[1]{Fig.~\ref{fig:#1}}
 \newcommand{\tabref}[1]{Table~\ref{tab:#1}}
-
 
 % Math macros =====================================================================
 \def\NN{\mathbb{N}} % natural numbers
@@ -48,13 +37,8 @@
 \DeclareMathOperator{\im}{Im} % imaginary part
 \DeclareMathOperator{\atan}{atan2} % two-argument arc tangent
 
-\newcommand{\id}{\mathrm{id}} % identity operator
-
 % macros for common indices, to adjust kerning (many just default kerning, but there in case it happens to get typed anyway...)
 \renewcommand{\ij}{i\!j}
-  \newcommand{\ii}{ii}
-  \newcommand{\jj}{jj}
-  \newcommand{\kk}{kk}
   \newcommand{\jk}{jk}
   \newcommand{\ki}{ki}
   \newcommand{\ji}{ji}
