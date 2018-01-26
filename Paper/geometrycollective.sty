@@ -6,6 +6,14 @@
 %%% OFF %%% \usepackage{ellipsis} % fix spacing around ...
 \usepackage{mathtools}
 \mathtoolsset{centercolon} % properly center :=
+\usepackage{soul}
+
+% \citestyle{acmauthoryear} % uses name and year rather than number
+
+% Macros for to-do items ================================================================
+\sethlcolor{yellow}
+\newcommand{\todo}[1]{\textbf{\parbox{\columnwidth}{\hl{TODO: #1}}}}
+\renewcommand{\comment}[2]{\pdfmarkupcomment[markup=Highlight,color=yellow]{#1}{#2}}
 
 % Abbreviations =========================================================================
 \newcommand{\Eg}{\emph{E.g.}}
@@ -16,6 +24,7 @@
 \newcommand{\etc}{\emph{etc.}}
 \newcommand{\etal}{\emph{et al.}}
 \newcommand{\resp}{\emph{resp.}}
+\newcommand{\ala}{\emph{\`{a} la}\ }
 
 % References ======================================================================
 \renewcommand{\eqref}[1]{Eqn.~\ref{eq:#1}}
@@ -25,6 +34,11 @@
 \newcommand{\appref}[1]{App.~\ref{app:#1}}
 \newcommand{\figref}[1]{Fig.~\ref{fig:#1}}
 \newcommand{\tabref}[1]{Table~\ref{tab:#1}}
+
+% Figures =========================================================================
+% Use this "figure location" command to describe placement of sub-figures in captions ("Left:", "Right:", etc.).
+% This way, all such labels have a consistent style (which can be later modified if need be).
+\newcommand{\figloc}[1]{\emph{#1}}
 
 % Math macros =====================================================================
 \def\NN{\mathbb{N}} % natural numbers
@@ -44,7 +58,7 @@
   \newcommand{\ji}{ji}
   \newcommand{\kj}{kj}
   \newcommand{\ik}{ik}
-  \newcommand{\ijk}{i\!jk}
+  \newcommand{\ijk}{ijk}
 
 % sans-serif macros for matrices and vectors (to avoid conflicts with often heavily overloaded notation)
 \newcommand{\T}{\mathsf{T}} % transpose
