@@ -1,39 +1,50 @@
-%%% OFF %%% \usepackage{amsmath,amssymb,amsthm}
-%%% OFF %%% 
-%%% OFF %%% % Typography =========================================================================
-%%% OFF %%% \usepackage[charter,cal=cmcal,sfscaled=true]{mathdesign} % use Charter, which offers uniformity between math + text fonts (and looks nice)
-%%% OFF %%% \usepackage{microtype} % more sophisticated kerning, targeting uniform gray / straight margins
-%%% OFF %%% \usepackage{ellipsis} % fix spacing around ...
+% Typography =========================================================================
+\usepackage{microtype} % more sophisticated kerning, targeting uniform gray / straight margins
+\usepackage{ellipsis} % fix spacing around ...
 \usepackage{mathtools}
 \mathtoolsset{centercolon} % properly center :=
 \usepackage{soul}
+\usepackage{siunitx} % physical units
 
 % \citestyle{acmauthoryear} % uses name and year rather than number
 
 % Macros for to-do items ================================================================
+\usepackage[author={Keenan Crane}]{pdfcomment}
+\usepackage{soul}
 \sethlcolor{yellow}
 \newcommand{\todo}[1]{\textbf{\parbox{\columnwidth}{\hl{TODO: #1}}}}
 \renewcommand{\comment}[2]{\pdfmarkupcomment[markup=Highlight,color=yellow]{#1}{#2}}
 
 % Abbreviations =========================================================================
-\newcommand{\Eg}{\emph{E.g.}}
-\newcommand{\eg}{\emph{e.g.}}
-\newcommand{\Ie}{\emph{I.e.}}
-\newcommand{\ie}{\emph{i.e.}}
-\newcommand{\Etc}{\emph{Etc.}}
-\newcommand{\etc}{\emph{etc.}}
-\newcommand{\etal}{\emph{et al.}}
-\newcommand{\resp}{\emph{resp.}}
-\newcommand{\ala}{\emph{\`{a} la}\ }
+\newcommand{\Eg}{\emph{E.g.}} % "for example"
+\newcommand{\eg}{\emph{e.g.}} % "for example"
+\newcommand{\Ie}{\emph{I.e.}} % "that is"
+\newcommand{\ie}{\emph{i.e.}} % "that is"
+\newcommand{\cf}{\emph{cf.\ }} % "confer"
+\newcommand{\Etc}{\emph{Etc.}} % "et cetera" (and so on)
+\newcommand{\etc}{\emph{etc.}} % "et cetera" (and so on)
+\newcommand{\etal}{\emph{et al.}} % "and others"
+\newcommand{\resp}{\emph{resp.}} % "respectively"
+\newcommand{\ala}{\emph{\`{a} la}} % "in the style of"
+\newcommand{\apriori}{\emph{a priori}} % based on deduction rather than experience
+\newcommand{\aposteriori}{\emph{a posteriori}} % based on observation
+\newcommand{\invivo}{\emph{in vivo}} % taking place in a living organism
+\newcommand{\invitro}{\emph{in vitro}} % taking place in an artifical environment
+\newcommand{\inutero}{\emph{in utero}} % taking place before birth
+\newcommand{\adlibitum}{\emph{ad libitum}} % without preparation
+\newcommand{\abinitio}{\emph{ab initio}} % without preparation
 
-% References ======================================================================
-\renewcommand{\eqref}[1]{Eqn.~\ref{eq:#1}}
-\newcommand{\eqrefs}[2]{Eqn.~\ref{eq:#1} and \ref{eq:#2}}
-\newcommand{\secref}[1]{Sec.~\ref{sec:#1}}
-\newcommand{\secrefs}[2]{Sections~\ref{sec:#1} and \ref{sec:#2}}
-\newcommand{\appref}[1]{App.~\ref{app:#1}}
-\newcommand{\figref}[1]{Fig.~\ref{fig:#1}}
+% References ============================================================================
+\renewcommand{\eqref}[1]{Equation~\ref{eq:#1}}
+\newcommand{\figref}[1]{Figure~\ref{fig:#1}}
+\newcommand{\secref}[1]{Section~\ref{sec:#1}}
+\newcommand{\appref}[1]{Appendix~\ref{app:#1}}
 \newcommand{\tabref}[1]{Table~\ref{tab:#1}}
+\newcommand{\defref}[1]{Definition~\ref{def:#1}}
+\newcommand{\thmref}[1]{Theorem~\ref{thm:#1}}
+\newcommand{\lemref}[1]{Lemma~\ref{lem:#1}}
+\newcommand{\prpref}[1]{Proposition~\ref{prp:#1}}
+\newcommand{\dfnref}[1]{Definition~\ref{def:#1}}
 
 % Figures =========================================================================
 % Use this "figure location" command to describe placement of sub-figures in captions ("Left:", "Right:", etc.).
