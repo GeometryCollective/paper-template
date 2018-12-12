@@ -20,3 +20,5 @@ clean:
 	rm -f *.log
 	rm -f *.out
 	rm -f *.cut
+	rm -f *.upa
+	rm -f *.upb

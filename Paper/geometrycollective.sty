@@ -6,13 +6,38 @@
 \usepackage{soul}
 \usepackage{siunitx} % physical units
 
-% \citestyle{acmauthoryear} % uses name and year rather than number
+\citestyle{acmauthoryear} % uses name and year rather than number
+\setcitestyle{square}
+
+% Figures =========================================================================
+\usepackage{wrapfig}
+
+% Pseudocode =========================================================================
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+% \floatname{algorithm}{Procedure}
+\algtext*{EndProcedure}
+\algtext*{EndIf}
+\algtext*{EndFor}
+\newcommand{\InputConditions}[1]{\Require \parbox[t]{\dimexpr\linewidth-\algorithmicindent}{#1\strut}}
+\newcommand{\OutputConditions}[1]{\Ensure \parbox[t]{\dimexpr\linewidth-\algorithmicindent}{#1\strut}}
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
+\newcommand{\Proc}[1]{\mbox{\textsc{#1}}}
+\newcommand{\CommentLine}[1]{\Statex\hspace{-\algorithmicindent}\Comment{#1}}
+\renewcommand{\algorithmicforall}{\textbf{for each}}
+\renewcommand{\algorithmicrepeat}{\textbf{do}}
+\renewcommand{\algorithmicuntil}{\textbf{while}}
+\let\ForEach\ForAll
+\let\Do\Repeat
+\let\dWhile\Until
 
 % Macros for to-do items ================================================================
 \usepackage[author={Keenan Crane}]{pdfcomment}
 \usepackage{soul}
 \sethlcolor{yellow}
-\newcommand{\todo}[1]{\textbf{\parbox{\columnwidth}{\hl{TODO: #1}}}}
+\newcommand{\todo}[1]{\textbf{\hl{TODO: #1}}}
 \renewcommand{\comment}[2]{\pdfmarkupcomment[markup=Highlight,color=yellow]{#1}{#2}}
 
 % Abbreviations =========================================================================
@@ -45,6 +70,7 @@
 \newcommand{\lemref}[1]{Lemma~\ref{lem:#1}}
 \newcommand{\prpref}[1]{Proposition~\ref{prp:#1}}
 \newcommand{\dfnref}[1]{Definition~\ref{def:#1}}
+\renewcommand{\algref}[1]{Algorithm~\ref{alg:#1}}
 
 % Figures =========================================================================
 % Use this "figure location" command to describe placement of sub-figures in captions ("Left:", "Right:", etc.).
@@ -125,4 +151,5 @@
 \newcommand{\xsf}{\mathsf{x}}
 \newcommand{\ysf}{\mathsf{y}}
 \newcommand{\zsf}{\mathsf{z}}
+
 
