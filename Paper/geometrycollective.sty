@@ -6,8 +6,12 @@
 \usepackage{soul}
 \usepackage{siunitx} % physical units
 
+% better v
+\DeclareSymbolFont{matha}{OML}{txmi}{m}{it}
+\DeclareMathSymbol{\varv}{\mathord}{matha}{118}
+
 \citestyle{acmauthoryear} % uses name and year rather than number
-\setcitestyle{square}
+\setcitestyle{square,nosort}
 
 % Figures =========================================================================
 \usepackage{wrapfig}
@@ -32,6 +36,8 @@
 \let\ForEach\ForAll
 \let\Do\Repeat
 \let\dWhile\Until
+\definecolor{commentblue}{rgb}{0.643, 0.651, 0.820}
+\renewcommand{\Comment}[1]{\hfill\textcolor{commentblue}{\(\triangleright\)\textit{#1}}}
 
 % Macros for to-do items ================================================================
 \usepackage[author={Keenan Crane}]{pdfcomment}
@@ -53,6 +59,7 @@
 \newcommand{\ala}{\emph{\`{a} la}} % "in the style of"
 \newcommand{\apriori}{\emph{a priori}} % based on deduction rather than experience
 \newcommand{\aposteriori}{\emph{a posteriori}} % based on observation
+\newcommand{\Aposteriori}{\emph{A posteriori}} % based on observation
 \newcommand{\invivo}{\emph{in vivo}} % taking place in a living organism
 \newcommand{\invitro}{\emph{in vitro}} % taking place in an artifical environment
 \newcommand{\inutero}{\emph{in utero}} % taking place before birth
@@ -71,6 +78,39 @@
 \newcommand{\prpref}[1]{Proposition~\ref{prp:#1}}
 \newcommand{\dfnref}[1]{Definition~\ref{def:#1}}
 \renewcommand{\algref}[1]{Algorithm~\ref{alg:#1}}
+
+% Multi-references === (there has to be a better way...)
+\usepackage{etoolbox}
+\newcommand*{\elementsep}{}%
+\newcommand*{\lastelement}{}%
+\newcommand*{\prelastelement}{}%
+\newcommand{\renewelements}{
+  \renewcommand*{\elementsep}{}%
+  \renewcommand*{\lastelement}{}%
+  \renewcommand*{\prelastelement}{}%
+}
+
+\newcommand*{\dodisplayeqn}[1]{\elementsep\lastelement\renewcommand{\lastelement}{\renewcommand{\elementsep}{, }\renewcommand{\prelastelement}{ and }\ref{eqn:#1}}}
+\newcommand*{\dodisplayfig}[1]{\elementsep\lastelement\renewcommand{\lastelement}{\renewcommand{\elementsep}{, }\renewcommand{\prelastelement}{ and }\ref{fig:#1}}}
+\newcommand*{\dodisplaysec}[1]{\elementsep\lastelement\renewcommand{\lastelement}{\renewcommand{\elementsep}{, }\renewcommand{\prelastelement}{ and }\ref{sec:#1}}}
+\newcommand*{\dodisplayapp}[1]{\elementsep\lastelement\renewcommand{\lastelement}{\renewcommand{\elementsep}{, }\renewcommand{\prelastelement}{ and }\ref{app:#1}}}
+\newcommand*{\dodisplaytab}[1]{\elementsep\lastelement\renewcommand{\lastelement}{\renewcommand{\elementsep}{, }\renewcommand{\prelastelement}{ and }\ref{tab:#1}}}
+\newcommand*{\dodisplaydef}[1]{\elementsep\lastelement\renewcommand{\lastelement}{\renewcommand{\elementsep}{, }\renewcommand{\prelastelement}{ and }\ref{def:#1}}}
+\newcommand*{\dodisplaythm}[1]{\elementsep\lastelement\renewcommand{\lastelement}{\renewcommand{\elementsep}{, }\renewcommand{\prelastelement}{ and }\ref{thm:#1}}}
+\newcommand*{\dodisplaylem}[1]{\elementsep\lastelement\renewcommand{\lastelement}{\renewcommand{\elementsep}{, }\renewcommand{\prelastelement}{ and }\ref{lem:#1}}}
+\newcommand*{\dodisplayprp}[1]{\elementsep\lastelement\renewcommand{\lastelement}{\renewcommand{\elementsep}{, }\renewcommand{\prelastelement}{ and }\ref{prp:#1}}}
+\newcommand*{\dodisplayalg}[1]{\elementsep\lastelement\renewcommand{\lastelement}{\renewcommand{\elementsep}{, }\renewcommand{\prelastelement}{ and }\ref{alg:#1}}}
+\newcommand*{\eqnrefs}[1]{\renewelements Equations \forcsvlist{\dodisplayeqn}{#1}\prelastelement\lastelement}
+\newcommand*{\figrefs}[1]{\renewelements Figures \forcsvlist{\dodisplayfig}{#1}\prelastelement\lastelement}
+\newcommand*{\secrefs}[1]{\renewelements Sections \forcsvlist{\dodisplaysec}{#1}\prelastelement\lastelement}
+\newcommand*{\apprefs}[1]{\renewelements Appendices \forcsvlist{\dodisplayapp}{#1}\prelastelement\lastelement}
+\newcommand*{\tabrefs}[1]{\renewelements Tables \forcsvlist{\dodisplaytab}{#1}\prelastelement\lastelement}
+\newcommand*{\defrefs}[1]{\renewelements Definitions \forcsvlist{\dodisplaydef}{#1}\prelastelement\lastelement}
+\newcommand*{\thmrefs}[1]{\renewelements Theorems \forcsvlist{\dodisplaythm}{#1}\prelastelement\lastelement}
+\newcommand*{\lemrefs}[1]{\renewelements Lemmas \forcsvlist{\dodisplaylem}{#1}\prelastelement\lastelement}
+\newcommand*{\prprefs}[1]{\renewelements Propositions \forcsvlist{\dodisplayprp}{#1}\prelastelement\lastelement}
+\newcommand*{\algrefs}[1]{\renewelements Algorithms \forcsvlist{\dodisplayalg}{#1}\prelastelement\lastelement}
+
 
 % Figures =========================================================================
 % Use this "figure location" command to describe placement of sub-figures in captions ("Left:", "Right:", etc.).
