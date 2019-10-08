@@ -1,6 +1,8 @@
+template.pdf
 *.aux
 *.log
 *.out
 *.bbl
 *.blg
 *.toc
+*.up*
