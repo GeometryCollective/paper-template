@@ -1,4 +1,4 @@
-TARGET = template
+TARGET = Paper
 
 all:
 	pdflatex $(TARGET)
