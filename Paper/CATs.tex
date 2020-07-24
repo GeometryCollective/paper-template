@@ -48,9 +48,9 @@
 % Document starts
 \begin{document}
 % Title portion
-\title{Paper Title} 
-\author{Author 1} 
-\author{Author 2} 
+\title{Circular Arc Triangulations} 
+\author{Ethan Lu} 
+\author{Keenan Crane} 
 \affiliation{%
   \institution{Carnegie Mellon University}
   \streetaddress{5000 Forbes Ave}
@@ -58,10 +58,10 @@
   \state{PA}
   \postcode{15213}}
 
-\renewcommand\shortauthors{Author 1 and Author 2}
+\renewcommand\shortauthors{Ethan Lu and Keenan Crane}
 
 \begin{abstract}
-   Your ad here.
+   This paper explores how triangulations with circular edges can be a valuable primitive for a variety of geometric algorithms.  An extremely common way to discretize smooth surfaces is using Euclidean triangles, with straight edges---however, such triangles do a poor job of capturing some important features of smooth surfaces, such as its curvature (which becomes highly singular), and angle-preserving or \emph{conformal} maps (which cannot preserve angles in the discrete setting).  On the other hand, surface approximations using higher-order patches (NURBS, \etc{}) become difficult to control, and to reason about.  Circular arc triangulations (CATs) provide a middle ground, where only a few additional degrees of freedom give a significant geometric improvement.  We describe a variety of ways of parameterizing CATs, including a novel parameterization by a triangle in a constant-curvature geometry, plus a M\"{o}bius transformation of the plane---different parameterizations in turn allow us to formulate efficient algorithms and optimization problems in various settings.  In particular, we show how to approximate a curved surface by a CAT mesh with curvature only along edges (rather than at vertices); using a connection to \emph{circle patterns} we describe a discrete version of Riemann mapping where angles are directly preserved; and, X.
 \end{abstract}
 
 
@@ -139,7 +139,7 @@ Here is a paper.~\cite{reid:scribe}
 
 % Bibliography
 \bibliographystyle{ACM-Reference-Format}
-\bibliography{Paper}
+\bibliography{CATs}
 
 \end{document}
 

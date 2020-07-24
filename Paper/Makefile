@@ -1,4 +1,4 @@
-TARGET = SelfAvoiding
+TARGET = CATs
 DIFFVERSION = c76f4a68dd05643a7f2218d2a0d919f7d34642b0
 
 all:
