@@ -31,7 +31,7 @@ to build your paper.  On Mac, this will also open the paper PDF (on other platfo
 
 This command will compile (and open) a PDF showing you what changed (by running a tool called `latexdiff`).  To set the previous version, you should use `git log` to find the commit number of the version of interest, and copy/paste this string into the `DIFFVERSION =` field of the `Makefile`.
 
-## Compressing the paper
+### Compressing the paper
 
 Even if you take care to compress your images, `pdflatex` often produces _extremely_ bloated PDF files (e.g., 80MB for a document that can nicely be compressed down to 10MB without any noticeable loss of fidelity).  A good way to get a high-quality compressed version of your final paper is to run the `File -> Save as Other -> Optimized PDF…` from Adobe Acrobat.  (Your readers will thank you!)
 
