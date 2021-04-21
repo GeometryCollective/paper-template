@@ -52,3 +52,31 @@ You'll save yourself time and trouble by creating figures that are compatible in
 An Illustrator template that conforms to this specification is provided in `Media/ACM Two Column.ai`.  To install this template, just drop it in `/Applications/Adobe Illustrator/Support Files/New Document Profiles/en_US`, or the analogous path on your system.  You should now be able to select this template from the New Document dialog.
 
 **A note about color and transparency.** As of 2020, `pdflatex` still has poor support for certain PDF features, especially transparent gradients.  Another common error is to save PDF files in CMYK color mode, which in some PDF viewers (like Preview on the Mac) can cause the whole page containing the image to look faded.  In general, you should double check that any included images render properly in your final document.  
+
+## Linked vs. embedded images
+
+In order to make figures editable by your coauthors, you should **ensure that all bitmap images are embedded in the PDF**.
+
+In short, there are two ways an Adobe Illustrator document can refer to images:
+
+- **Linked:** The file stores a path to an external bitmap file (JPG, PNG, etc.)
+- **Embedded:** The bitmap image is stored exclusively in the Illustrator document, with no external links.
+
+Where this gets confusing is that, if you save a file as PDF, Illustrator will _also_ embed a copy of the bitmap image in the PDF file.  However, if the Illustrator document used any external links, _the PDF will still not be editable by other users_.  Instead, loading the PDF into Illustrator will yield a message of the form
+
+   ~~~
+   Could not find the linked file "bitmap.jpg".  Choose Replace
+   to select another file or Ignore to leave the link unchanged.
+   ~~~
+
+Unless your coauthors have a copy of `bitmap.jpg`, they will be unable to edit the file.
+
+The solution is to make sure that all bitmap images are embedded.  There are two ways to make this happen:
+
+1. (Safe way) Always import bitmap images by copying and pasting from another program (like Photoshop) into Illustrator.  This way you can be sure that Illustrator is not linking to an external file (because it does not know where the pixels on the clipboard came from!)
+2. (Less safe way) Before saving your final document, select any bitmap images, then open up the `Links` palette from the `Window` menu.  In the upper-right corner of this palette there is a drop-down menu; select the `Embed Image(s)` option.
+
+The reason that the "less safe" way is less safe is that you can easily forget to do it!
+
+Note that in some cases it is convenient to link to external files, so that the Illustrator composition is automatically updated when the bitmap images change (e.g., when images are re-rendered).  In this case, a good practice is to keep a linked version in the `/Media` subdirectory, but embed all images before putting a final figure in the `/Paper/images` subdirectory.
+
