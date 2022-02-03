@@ -1,4 +1,7 @@
-template.pdf
+diff.pdf
+diff.tex
+Paper_old.tex
+Paper.pdf
 *.aux
 *.log
 *.out
