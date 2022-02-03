@@ -21,7 +21,7 @@ After changing the names (as above), you should just be able to type
 
    `make`
 
-to build your paper.  On Mac, this will also open the paper PDF (on other platforms, it doesn't do anything the command `open` doesn't exist).  Note that this command won't automatically build the bibliography; for that, you'll need to type
+to build your paper.  On Mac, this will also open the paper PDF (on other platforms, it doesn't do anything if the command `open` doesn't exist).  Note that this command won't automatically build the bibliography; for that, you'll need to type
 
    `make bib`
 
