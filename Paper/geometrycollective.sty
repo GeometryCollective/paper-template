@@ -49,6 +49,12 @@
 \renewcommand{\comment}[2]{\pdfmarkupcomment[markup=Highlight,color=yellow]{#1}{#2}}
 
 % Abbreviations =========================================================================
+% TODO Avoid the "eating a space" issue by defining commands like this:
+%
+% \usepackage{xspace}
+% \DeclareRobustCommand{\ala}{\emph{\`{a}~la}\xspace}
+%
+% TODO
 \newcommand{\Eg}{\emph{E.g.}} % "for example"
 \newcommand{\eg}{\emph{e.g.}} % "for example"
 \newcommand{\Ie}{\emph{I.e.}} % "that is"
