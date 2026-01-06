@@ -16,6 +16,26 @@
 % Figures =========================================================================
 \usepackage{wrapfig}
 
+% Robust handling of missing images
+\let\oldincludegraphics\includegraphics
+\renewcommand{\includegraphics}[2][]{%
+  \IfFileExists{#2}{%
+    % File exists: include it normally
+    \oldincludegraphics[#1]{#2}%
+  }{%
+    % File missing: insert a placeholder box
+    \fbox{%
+      \begin{minipage}[c][3cm][c]{4cm}%
+        \centering
+        \textbf{\color{red}Missing Image:}\\
+        % \detokenize makes sure underscores don't crash the build
+        \texttt{\detokenize{#2}} 
+      \end{minipage}%
+    }%
+    \typeout{WARNING: Image file '#2' not found! using placeholder.}%
+  }%
+}
+
 % Pseudocode =========================================================================
 %\usepackage{algorithm}
 \usepackage{algorithmicx}
