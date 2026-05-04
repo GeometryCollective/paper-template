@@ -47,13 +47,23 @@ Don't get spooked out—the "graveyard" is just a place to move text/figures tha
 
 ## Notes about diagrams
 
-You'll save yourself time and trouble by creating figures that are compatible in shape, size, and style with the document style.  As of 2020, the main document font is Libertine 9pt.  The font for captions is Biolinium 8pt.  Both of these fonts are freely available online; just do a Google search and you'll find them.  The width of a single-column figure is 243.15pt; the width of a double-column figure is 510.30pt.  You can always get updated values directly via TeX; see the commands used in `Paper/template.tex`.
+You'll save yourself time and trouble by creating figures that are compatible in shape, size, and style with the document style.  The width of a single-column figure is 243.15pt; the width of a double-column figure is 510.30pt.  You can always get updated values directly via TeX; see the commands used in `Paper/template.tex`.  **Please do not create diagrams at arbitrary sizes and scale them up/down on import!** (E.g., using `width=` or `scale=` options.)  Building diagrams this way will mean that your line widths, etc., will look different in each figure, and worse, your text/labels may become illegible, or look huge relative to the surrounding text.
 
 An Illustrator template that conforms to this specification is provided in `Media/ACM Two Column.ai`.  To install this template, just drop it in `/Applications/Adobe Illustrator/Support Files/New Document Profiles/en_US`, or the analogous path on your system.  You should now be able to select this template from the New Document dialog.
 
-**A note about color and transparency.** As of 2020, `pdflatex` still has poor support for certain PDF features, especially transparent gradients.  Another common error is to save PDF files in CMYK color mode, which in some PDF viewers (like Preview on the Mac) can cause the whole page containing the image to look faded.  In general, you should double check that any included images render properly in your final document.  
+### Fonts
 
-## Linked vs. embedded images
+As of 2026, the main document font is Libertinus Serif (formerly Libertine) 9pt.  The font for captions is Libertinus Sans (formerly Biolinium) 8pt.  The canonical version of these fonts is hosted at
+
+https://github.com/alerque/libertinus/
+
+**Please use this version of the fonts** so that diagrams are easy to share between collaborators.  If you use arbitrary versions of the fonts (e.g., that you find via Google Search), Illustrator and other programs will often prompt you about missing fonts, or display diagrams incorrectly.
+
+### Color and Transparency
+
+As of 2020, `pdflatex` still has poor support for certain PDF features, especially transparent gradients.  Another common error is to save PDF files in CMYK color mode, which in some PDF viewers (like Preview on the Mac) can cause the whole page containing the image to look faded.  In general, you should double check that any included images render properly in your final document.  
+
+### Linked vs. embedded images
 
 In order to make figures editable by your coauthors, you should **ensure that all bitmap images are embedded in the PDF**.
 
