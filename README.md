@@ -57,6 +57,12 @@ As of 2026, the main document font is Libertinus Serif (formerly Libertine) 9pt.
 
 https://github.com/alerque/libertinus/
 
+Or you can install it via [Homebrew](https://brew.sh/) via
+
+```
+brew install --cask font-libertinus
+```
+
 **Please use this version of the fonts** so that diagrams are easy to share between collaborators.  If you use arbitrary versions of the fonts (e.g., that you find via Google Search), Illustrator and other programs will often prompt you about missing fonts, or display diagrams incorrectly.
 
 ### Color and Transparency
