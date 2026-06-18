@@ -65,6 +65,15 @@ brew install --cask font-libertinus
 
 **Please use this version of the fonts** so that diagrams are easy to share between collaborators.  If you use arbitrary versions of the fonts (e.g., that you find via Google Search), Illustrator and other programs will often prompt you about missing fonts, or display diagrams incorrectly.
 
+#### Typesetting Math in LaTeXiT!
+
+You can get the ACM fonts in LaTeXiT by going to the `LaTeX -> Show Preamble` menu, which brings up a preamble palette.  In this preamble you can then add the lines
+
+```
+\usepackage{libertine}
+\usepackage[libertine]{newtxmath}
+```
+
 ### Color and Transparency
 
 As of 2020, `pdflatex` still has poor support for certain PDF features, especially transparent gradients.  Another common error is to save PDF files in CMYK color mode, which in some PDF viewers (like Preview on the Mac) can cause the whole page containing the image to look faded.  In general, you should double check that any included images render properly in your final document.  
