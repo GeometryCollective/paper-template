@@ -1,9 +1,9 @@
 TARGET = Paper
-DIFFVERSION = c76f4a68dd05643a7f2218d2a0d919f7d34642b0
+DIFFVERSION = ec5b098c7d94af43d6f36769d1908138a74b45a6
 
 all:
 	pdflatex $(TARGET)
-	open $(TARGET).pdf
+	if type open > /dev/null; then open $(TARGET).pdf; fi
 
 diff:
 	git show $(DIFFVERSION):Paper/$(TARGET).tex > $(TARGET)_old.tex
@@ -13,7 +13,7 @@ diff:
 	pdflatex diff
 	bibtex diff
 	pdflatex diff
-	open diff.pdf
+	if type open > /dev/null; then open diff.pdf; fi
 
 bib:
 	pdflatex $(TARGET)
@@ -21,7 +21,7 @@ bib:
 	pdflatex $(TARGET)
 	bibtex $(TARGET)
 	pdflatex $(TARGET)
-	open $(TARGET).pdf
+	if type open > /dev/null; then open $(TARGET).pdf; fi
 
 clean:
 	rm -f $(TARGET).pdf
