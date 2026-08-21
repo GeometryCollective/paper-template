@@ -157,13 +157,14 @@
 \DeclareMathOperator{\atan}{atan2} % two-argument arc tangent
 
 % macros for common indices, to adjust kerning (many just default kerning, but there in case it happens to get typed anyway...)
-\renewcommand{\ij}{i\!j}
-  \newcommand{\jk}{jk}
-  \newcommand{\ki}{ki}
-  \newcommand{\ji}{ji}
-  \newcommand{\kj}{kj}
-  \newcommand{\ik}{ik}
-  \newcommand{\ijk}{ijk}
+\renewcommand{\ij}{i{\mkern -1.5mu}j}
+\newcommand{\jk}{jk}
+\newcommand{\ki}{ki}
+\newcommand{\ji}{ji}
+\newcommand{\kj}{kj}
+\newcommand{\ik}{ik}
+\newcommand{\ijk}{i{\mkern -1.5mu}jk}
+\newcommand{\ijl}{i{\mkern -1.5mu}jl}
 
 % sans-serif macros for matrices and vectors (to avoid conflicts with often heavily overloaded notation)
 \newcommand{\T}{\mathsf{T}} % transpose
